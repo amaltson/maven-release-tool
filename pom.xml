@@ -34,7 +34,7 @@
 					</execution>
 				</executions>
 				<configuration>
-					<runTarget>org.mrt.Application/Application.html</runTarget>
+					<runTarget>org.mrt.MavenReleaseTool/MavenReleaseTool.html</runTarget>
 				</configuration>
 			</plugin>
 
