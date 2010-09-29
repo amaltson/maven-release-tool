@@ -12,7 +12,7 @@
 		<!-- convenience to define GWT version in one place -->
 		<gwt.version>2.0.4</gwt.version>
 
-		<!--  tell the compiler we can use 1.5 -->
+		<!-- tell the compiler we can use 1.5 -->
 		<maven.compiler.source>1.5</maven.compiler.source>
 		<maven.compiler.target>1.5</maven.compiler.target>
 
@@ -52,7 +52,7 @@
 
 	<dependencies>
 
-		<!--  GWT dependencies (from central repo) -->
+		<!-- GWT dependencies (from central repo) -->
 		<dependency>
 			<groupId>com.google.gwt</groupId>
 			<artifactId>gwt-servlet</artifactId>
@@ -64,6 +64,12 @@
 			<artifactId>gwt-user</artifactId>
 			<version>${gwt.version}</version>
 			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.google.inject</groupId>
+			<artifactId>guice</artifactId>
+			<version>2.0</version>
 		</dependency>
 
 		<!-- test -->
