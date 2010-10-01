@@ -2,31 +2,41 @@ package org.mrt.shared;
 
 import java.util.List;
 
+/**
+ * Represents the physical Maven module with a {@link MavenTarget}, a list of
+ * {@link MavenTarget} dependencies and additional meta-data.
+ * 
+ * @author Arthur Kalmenson
+ */
 public class MavenModule {
 
-    private String groupId, artifactId, version;
-    private List<MavenModule> dependencies;
+	private MavenTarget mavenTarget;
+	private SourceCodeManagement scm;
 
-    public MavenModule(String groupId, String artifactId, String version, List<MavenModule> dependencies) {
-        this.groupId = groupId;
-        this.artifactId = artifactId;
-        this.version = version;
-        this.dependencies = dependencies;
-    }
+	private List<MavenTarget> dependencies;
 
-    public String getGroupId() {
-        return groupId;
-    }
+	public MavenTarget getMavenTarget() {
+		return mavenTarget;
+	}
 
-    public String getArtifactId() {
-        return artifactId;
-    }
+	public void setMavenTarget(MavenTarget mavenTarget) {
+		this.mavenTarget = mavenTarget;
+	}
 
-    public String getVersion() {
-        return version;
-    }
+	public SourceCodeManagement getScm() {
+		return scm;
+	}
 
-    public List<MavenModule> getDependencies() {
-        return dependencies;
-    }
+	public void setScm(SourceCodeManagement scm) {
+		this.scm = scm;
+	}
+
+	public List<MavenTarget> getDependencies() {
+		return dependencies;
+	}
+
+	public void setDependencies(List<MavenTarget> dependencies) {
+		this.dependencies = dependencies;
+	}
+
 }
